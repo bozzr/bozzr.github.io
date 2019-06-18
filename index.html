@@ -35,10 +35,10 @@
         <script>
             //Animate image on clicking button function
             $(document).ready(function(){
-                $("#animate-image-example").click(function(){
+                $("#animate-image-button").click(function(){
                     $("#animate-image").animate({opacity: '1'})
                     $("#animate-image").animate({left: "+=800"}, 500);
-                    $("#animate-image").animate({left: "-=80"}, 200);
+                    $("#animate-image").animate({left: "-=800"}, 300);
                 });
             });
         </script>
@@ -46,43 +46,46 @@
     </head>
 
     <body>
-        <h2 id='overview' class='section-heading'>Overview</h2>
-        <p class='section-text'>
-            The Huracán EVO represents the natural evolution of the most successful V10 in Lamborghini history. It is the result of fine-tuning and consolidation which involves the already existing features and performance of Huracán, combined with the development of new solutions in terms of efficiency and design. But overall this vehicle stands out for its ability to anticipate the moves and satisfy the desires of the driver, in harmony with the Lamborghini DNA.
-        </p>
-        <div id='image-container'>
-            <img src="images/lamborghini-front-photo.jpg" alt="Lamborghini front photo" id='change-colour-example' class='section-image'>
-              <div id='image-text'>
-                <h4>Lamborghini</h4>
-                <p>Some interesting text about the Lamborghini will go here.</p>
-              </div>
-        </div>
 
-        <div class='section-nav'>
-            <a href="#exterior">Next section</a>
-        </div>
+        <section id='overview'>
+            <h2 class='section-heading'>Overview</h2>
+            <p class='section-text' id='overview-text'>
+                The Huracán EVO represents the natural evolution of the most successful V10 in Lamborghini history. It is the result of fine-tuning and consolidation which involves the already existing features and performance of Huracán, combined with the development of new solutions in terms of efficiency and design. But overall this vehicle stands out for its ability to anticipate the moves and satisfy the desires of the driver, in harmony with the Lamborghini DNA.
+            </p>
+            <div id='image-container'>
+                <img src="images/lamborghini-front-photo.jpg" alt="Lamborghini front photo" id='change-colour-example' class='section-image'>
+                  <div id='image-text'>
+                    <h4>Lamborghini Huracán EVO</h4>
+                    <p>Some interesting text about the Lamborghini will go here.</p>
+                  </div>
+            </div>
+        </section>
 
-        <h2 id='exterior' class='section-heading'>Exterior</h2>
-        <p class='section-text'>
+        <a href="#exterior" class='section-nav'>Next section</a>
+
+        <section id='exterior'>
+            <h2 class='section-heading'>Exterior</h2>
+            <p class='section-text'>
             The design of the Huracán EVO does not present a radical change in the original iconic shape and proportions, rather it represents a natural evolution that introduces sophisticated aerodynamic solutions, while remaining faithful to the iconic Lamborghini design. The front bumper adopts unmistakable Lamborghini design cues such as signature Y-shape stylistic elements, bonnet lines inspired by the Countach, skirt air ducts reminiscent of the Murciélago, and high-mounted exhaust tailpipes that recall the highest performing models of the Lamborghini range. The model also introduces the new 20” Aesir rims and debuts Ad Personam colors for the car body, including Arancio Xanto.
             These elements produce an evolution projected towards the future that does not forget the past.
-        </p>
-        <button type="button" id='animate-image-example'>Click to see the car!</button>
-        <img src="images/lamborghini-side-photo.jpg" alt="Lamborghini side photo" id='animate-image' class='section-image'>
-        <div class='section-nav'>
-            <a href="#interior" class='section-nav'>Next section</a>
-        </div>
+            </p>
+            <button type="button" id='animate-image-button'>Click to see the image</button>
+            <img src="images/lamborghini-side-photo.jpg" alt="Lamborghini side photo" id='animate-image' class='section-image'>
+        </section>
 
-        <h2 id='interior' class='section-heading'>Interior</h2>
-        <p class='section-text'>
-            The interior perfectly mirrors the evolutionary design of the Huracán EVO.
-            The cockpit features a cutting-edge 8.4” touchscreen system built into the central tunnel, which makes it possible to control the car and entertainment functions with a tap of your fingertips. The exclusive interior finishes, stemming from authentic Italian design, are made with the finest-quality materials: the upholstery is available in leather, Alcantara and—for the first time—Carbon Skin, an innovative carbon fiber material exclusively available with Lamborghini. All these details make the on-board experience even more unique and refined.
-        </p>
-        <img src="images/lamborghini-interior-photo.jpg" alt="Lamborghini interior photo" class='section-image'>
+        <a href="#interior" class='section-nav'>Next section</a>
 
-        <div class='section-nav'>
-            <a href="#overview" class='section-nav'>To the top</a>
-        </div>
+        <section id='interior'>
+            <h2 class='section-heading'>Interior</h2>
+            <p class='section-text' id='interior-text'>
+                The interior perfectly mirrors the evolutionary design of the Huracán EVO.
+                The cockpit features a cutting-edge 8.4” touchscreen system built into the central tunnel, which makes it possible to control the car and entertainment functions with a tap of your fingertips. The exclusive interior finishes, stemming from authentic Italian design, are made with the finest-quality materials: the upholstery is available in leather, Alcantara and—for the first time—Carbon Skin, an innovative carbon fiber material exclusively available with Lamborghini. All these details make the on-board experience even more unique and refined.
+            </p>
+            <img src="images/lamborghini-interior-photo.jpg" alt="Lamborghini interior photo" class='section-image'>
+        </section>
+
+        <a href="#overview" class='section-nav'>To the top</a>
+
     </body>
 
 </html>

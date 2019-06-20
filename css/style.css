@@ -1,5 +1,6 @@
 body {
     width: 80%;
+    margin: auto;
 }
 
 .section-text{
@@ -77,24 +78,35 @@ a {
     text-transform: uppercase;
     background-color: grey;
     margin: 0px;
-    padding: 50px;
+    padding: 50px 100px;
     font-family: sans-serif;
     color:black;
     font-size: 2em;
+    letter-spacing: 10px;
     box-sizing: border-box;
+    border-bottom: solid orange 10px;
 }
 
 .section-nav{
     width: 100%;
     text-align: right;
     text-transform: uppercase;
-    font-weight: 600;
     background-color: lightgrey;
     font-style: italic;
-    font-family: sans-serif;
+    font-family: "Verdana", sans-serif;
     color:black;
     font-size: 1.4em;
+    letter-spacing: 5px;
     box-sizing: border-box;
     display:block;
-    padding: 50px;
+    padding: 30px 100px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    text-align: center
 }

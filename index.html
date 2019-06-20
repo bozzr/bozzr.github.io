@@ -4,8 +4,14 @@
     <head>
         <title>Lamborghini Huracán EVO</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+        <script type="text/javascript">
+            //https://wp-mix.com/include-google-hosted-jquery-with-fallback
+            if (typeof jQuery == 'undefined'){
+                document.write(unescape("%3Cscript src='/js/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
 
         <script>
             //Scroll to the next section function
@@ -37,8 +43,8 @@
             $(document).ready(function(){
                 $("#animate-image-button").click(function(){
                     $("#animate-image").animate({opacity: '1'})
-                    $("#animate-image").animate({left: "+=800"}, 500);
-                    $("#animate-image").animate({left: "-=800"}, 300);
+                    $("#animate-image").animate({left: "+=600"}, 500);
+                    $("#animate-image").animate({left: "-=600"}, 300);
                 });
             });
         </script>
@@ -87,5 +93,7 @@
         <a href="#overview" class='section-nav'>To the top</a>
 
     </body>
-
+    <footer>
+    <p>Images and text sourced from: https://www.lamborghini.com/en-en/models/huracan/huracan-evo</p>
+    </footer>
 </html>

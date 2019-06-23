@@ -1,71 +1,10 @@
+/*Set body to only take up 80% of the screen*/
 body {
     width: 80%;
     margin: auto;
 }
 
-.section-text{
-    width: 50%;
-    text-align: center;
-    font-family: sans-serif;
-    color:black;
-    font-size: 1.2em;
-    box-sizing: border-box;
-    float:right;
-    padding:30px;
-}
-
-#change-colour-example {
-    width: 100%;
-    opacity: 1;
-}
-
-.section-image {
-    width: 50%;
-    display:block;
-    position:relative;
-    box-sizing: border-box;
-}
-
-#image-container {
-    width: 50%;
-    background-color: #d2462d;
-    position: relative;
-    box-sizing: border-box;
-}
-
-#image-text {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: #7b2a1b;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    opacity: 0;
-}
-
-#animate-image{
-    opacity: 0;
-}
-
-#image-text{
-    font-family: sans-serif;
-}
-
-#animate-image-button{
-    text-transform: uppercase;
-    width: 50%;
-    float: right;
-    color: black;
-    border: none;
-    padding: 20px 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-    vertical-align: middle;
-}
-
+/*Remove standard link style*/
 a {
     font-family: sans-serif;
     color:black;
@@ -73,6 +12,7 @@ a {
     text-decoration: none;
 }
 
+/*Set the styles for the section text, heading, navigation and images*/
 .section-heading {
     width: 100%;
     text-align: left;
@@ -87,7 +27,6 @@ a {
     box-sizing: border-box;
     border-bottom: solid orange 10px;
 }
-
 .section-nav{
     width: 100%;
     text-align: right;
@@ -102,7 +41,78 @@ a {
     display:block;
     padding: 30px 100px;
 }
+.section-nav:hover{
+    font-weight: bold;
+}
+.section-text {
+    width: 50%;
+    text-align: center;
+    font-family: sans-serif;
+    color:black;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    float:right;
+    padding:30px;
+}
+.section-image {
+    width: 50%;
+    display:block;
+    position:relative;
+    box-sizing: border-box;
+}
+/*Image container for colour changing image, this contains the background colour the image shows when mousing over*/
+#image-container {
+    width: 50%;
+    background-color: #d2462d;
+    position: relative;
+    box-sizing: border-box;
+}
+/*Actual image takes up 100% of the image container*/
+#change-colour-example {
+    width: 100%;
+}
+/*Style for the text that gets displayed when mousing over the image*/
+#image-text {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7b2a1b;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 0;
+    font-family: sans-serif;
+}
 
+/*Moving, animated image starts off invisible until button is clicked*/
+#animate-image{
+    opacity: 0;
+}
+/*Style for both buttons to show image and hide image*/
+.animate-button{
+    text-transform: uppercase;
+    width: 50%;
+    float: right;
+    color: white;
+    background-color: #d2462d;
+    border: none;
+    padding: 20px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    vertical-align: middle;
+    letter-spacing: 3px;
+}
+.animate-button:hover{
+    font-weight: bold;
+}
+/*Dont display the "hide image" button to start with*/
+#hide-image-button{
+    display: none;
+}
+
+/*Style for footer containing website reference.*/
 footer {
     background-color: black;
     color: white;

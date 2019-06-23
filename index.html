@@ -4,18 +4,23 @@
     <head>
         <title>Lamborghini Huracán EVO</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--Get jquery library from Google CDN-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+        <!--
+        If Jquery library is not found, then fallback to local Jquery file
+        Ref: https://wp-mix.com/include-google-hosted-jquery-with-fallback
+        -->
         <script type="text/javascript">
-            //https://wp-mix.com/include-google-hosted-jquery-with-fallback
             if (typeof jQuery == 'undefined'){
                 document.write(unescape("%3Cscript src='/js/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"));
             }
         </script>
-
+        <!--
+        If a link has a href that starts with #, it will scroll down to the section id that matches the href
+        that initiated the click.
+        Ref: https://dev.to/attacomsian/smooth-scroll-to-page-section-with-jquery-2jng
+        -->
         <script>
-            //Scroll to the next section function
-            //https://dev.to/attacomsian/smooth-scroll-to-page-section-with-jquery-2jng
             $(document).on('click', 'a[href^="#"]', function(e) {
                 e.preventDefault();
                 $('html, body').stop().animate({
@@ -23,47 +28,64 @@
                 }, 750, 'swing');
             });
         </script>
-
+        <!--Animate the image on mouse-over function to fade out the image and fade in the background color-->
         <script>
-            //Animate image on mouse-over function
+            //
             $(document).ready(function(){
                 $("#image-container").mouseenter(function(){
                     $("#change-colour-example").animate({opacity: '0'})
                     $("#image-text").animate({opacity: '1'})
+
             });
                 $("#image-container").mouseleave(function(){
                     $("#change-colour-example").animate({opacity: '1'})
                     $("#image-text").animate({opacity: '0'})
+
                 });
             });
         </script>
-
+        <!--Animate image on clicking button function to slide to the right, then back again to its starting position-->
         <script>
-            //Animate image on clicking button function
             $(document).ready(function(){
                 $("#animate-image-button").click(function(){
                     $("#animate-image").animate({opacity: '1'})
                     $("#animate-image").animate({left: "+=600"}, 500);
                     $("#animate-image").animate({left: "-=600"}, 300);
+                    $("#animate-image-button").css({display: 'none'})
+                    $("#hide-image-button").css({display: 'block'})
                 });
             });
         </script>
-
+        <!--Hide image when clicking the button-->
+        <script>
+            $(document).ready(function(){
+                $("#hide-image-button").click(function(){
+                    $("#animate-image").animate({opacity: '0'})
+                    $("#animate-image-button").css({display: 'block'})
+                    $("#hide-image-button").css({display: 'none'})
+                });
+            });
+        </script>
     </head>
 
     <body>
-
         <section id='overview'>
             <h2 class='section-heading'>Overview</h2>
+            <div class="row">
+            <div class="column1">
             <p class='section-text' id='overview-text'>
                 The Huracán EVO represents the natural evolution of the most successful V10 in Lamborghini history. It is the result of fine-tuning and consolidation which involves the already existing features and performance of Huracán, combined with the development of new solutions in terms of efficiency and design. But overall this vehicle stands out for its ability to anticipate the moves and satisfy the desires of the driver, in harmony with the Lamborghini DNA.
             </p>
-            <div id='image-container'>
-                <img src="images/lamborghini-front-photo.jpg" alt="Lamborghini front photo" id='change-colour-example' class='section-image'>
-                  <div id='image-text'>
-                    <h4>Lamborghini Huracán EVO</h4>
-                    <p>Some interesting text about the Lamborghini will go here.</p>
-                  </div>
+            </div>
+            <div class="column2">
+                <div id='image-container'>
+                    <img src="images/lamborghini-front-photo.jpg" alt="Lamborghini front photo" id='change-colour-example' class='section-image'>
+                      <div id='image-text'>
+                        <h4>Lamborghini Huracán EVO</h4>
+                        <p>Some interesting text about the Lamborghini will go here.</p>
+                </div>
+            </div>
+            </div>
             </div>
         </section>
 
@@ -76,7 +98,8 @@
             The design of the Huracán EVO does not present a radical change in the original iconic shape and proportions, rather it represents a natural evolution that introduces sophisticated aerodynamic solutions, while remaining faithful to the iconic Lamborghini design. The front bumper adopts unmistakable Lamborghini design cues such as signature Y-shape stylistic elements, bonnet lines inspired by the Countach, skirt air ducts reminiscent of the Murciélago, and high-mounted exhaust tailpipes that recall the highest performing models of the Lamborghini range. The model also introduces the new 20” Aesir rims and debuts Ad Personam colors for the car body, including Arancio Xanto.
             These elements produce an evolution projected towards the future that does not forget the past.
             </p>
-            <button type="button" id='animate-image-button'>Click to see the image</button>
+            <button type="button" id='animate-image-button' class='animate-button'>Click to see the image</button>
+            <button type="button" id='hide-image-button' class='animate-button'>Click to hide the image</button>
             </div>
             <img src="images/lamborghini-side-photo.jpg" alt="Lamborghini side photo" id='animate-image' class='section-image'>
             
@@ -94,7 +117,6 @@
         </section>
 
         <a href="#overview" class='section-nav'>To the top</a>
-
     </body>
     <footer>
     <p>Images and text sourced from: https://www.lamborghini.com/en-en/models/huracan/huracan-evo</p>

@@ -54,6 +54,8 @@ body {
 
 #animate-image-button{
     text-transform: uppercase;
+    width: 50%;
+    float: right;
     color: black;
     border: none;
     padding: 20px 50px;
@@ -62,7 +64,6 @@ body {
     display: inline-block;
     font-size: 1em;
     vertical-align: middle;
-    grid-column: 2;
 }
 
 a {

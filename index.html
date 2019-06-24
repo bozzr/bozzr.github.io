@@ -2,24 +2,22 @@
 <html lang="en-US">
 
     <head>
+        <!--Site title to appear in browse tab or window-->
         <title>Lamborghini Huracán EVO</title>
+        <!--External stylesheet-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <!--Get jquery library from Google CDN-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!--
-        If Jquery library is not found, then fallback to local Jquery file
-        Ref: https://wp-mix.com/include-google-hosted-jquery-with-fallback
-        -->
+        <!--If Jquery library is not found, then fallback to local Jquery file
+        Starr, Jeff. 2019. "Include Google Jquery With Local Fallback | WP-Mix". Wp-Mix.Com. https://wp-mix.com/include-google-hosted-jquery-with-fallback.-->
         <script type="text/javascript">
             if (typeof jQuery == 'undefined'){
                 document.write(unescape("%3Cscript src='/js/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"));
             }
         </script>
-        <!--
-        If a link has a href that starts with #, it will scroll down to the section id that matches the href
+        <!--Function for scrolling to section. If a link has a href that starts with #, it will scroll down to the section id that matches the href
         that initiated the click.
-        Ref: https://dev.to/attacomsian/smooth-scroll-to-page-section-with-jquery-2jng
-        -->
+        "Smooth Scroll To Page Section With Jquery - DEV Community". 2019. Dev.To. https://dev.to/attacomsian/smooth-scroll-to-page-section-with-jquery-2jng.-->
         <script>
             $(document).on('click', 'a[href^="#"]', function(e) {
                 e.preventDefault();
@@ -28,23 +26,21 @@
                 }, 750, 'swing');
             });
         </script>
-        <!--Animate the image on mouse-over function to fade out the image and fade in the background color-->
+        <!--Funciton to animate the image on mouse-over function to fade out the image and fade in the background color-->
         <script>
             //
             $(document).ready(function(){
                 $("#image-container").mouseenter(function(){
                     $("#change-colour-example").animate({opacity: '0'})
                     $("#image-text").animate({opacity: '1'})
-
             });
                 $("#image-container").mouseleave(function(){
                     $("#change-colour-example").animate({opacity: '1'})
                     $("#image-text").animate({opacity: '0'})
-
                 });
             });
         </script>
-        <!--Animate image on clicking button function to slide to the right, then back again to its starting position-->
+        <!--Function to animate image on clicking button. Image will slide to the right, then back again to its starting position-->
         <script>
             $(document).ready(function(){
                 $("#animate-image-button").click(function(){
@@ -56,7 +52,7 @@
                 });
             });
         </script>
-        <!--Hide image when clicking the button-->
+        <!--Function to hide image when clicking the button so it can be animated again-->
         <script>
             $(document).ready(function(){
                 $("#hide-image-button").click(function(){
@@ -69,44 +65,42 @@
     </head>
 
     <body>
+        <!--Overview section-->
         <section id='overview'>
             <h2 class='section-heading'>Overview</h2>
-            <div class="row">
-            <div class="column1">
             <p class='section-text' id='overview-text'>
                 The Huracán EVO represents the natural evolution of the most successful V10 in Lamborghini history. It is the result of fine-tuning and consolidation which involves the already existing features and performance of Huracán, combined with the development of new solutions in terms of efficiency and design. But overall this vehicle stands out for its ability to anticipate the moves and satisfy the desires of the driver, in harmony with the Lamborghini DNA.
             </p>
-            </div>
-            <div class="column2">
-                <div id='image-container'>
-                    <img src="images/lamborghini-front-photo.jpg" alt="Lamborghini front photo" id='change-colour-example' class='section-image'>
-                      <div id='image-text'>
-                        <h4>Lamborghini Huracán EVO</h4>
-                        <p>Some interesting text about the Lamborghini will go here.</p>
+            <!--Image container which is filled with background color for when image is hidden-->
+            <div id='image-container'>
+                <!--Displaying the image which hides when mousing over-->
+                <img src="images/lamborghini-front-photo.jpg" alt="Lamborghini front photo" id='change-colour-example' class='section-image'>
+                <!--Image description which is displayed when mousing over-->
+                <div id='image-text'>
+                    <h4>Lamborghini Huracán EVO</h4>
+                    <p>Some interesting text about the Lamborghini will go here.</p>
                 </div>
             </div>
-            </div>
-            </div>
         </section>
-
+        <!--Button to scroll to the next section when clicked-->
         <a href="#exterior" class='section-nav'>Next section</a>
-
+        <!--Exterior section-->
         <section id='exterior'>
             <h2 class='section-heading'>Exterior</h2>
-            <div>
             <p class='section-text'>
             The design of the Huracán EVO does not present a radical change in the original iconic shape and proportions, rather it represents a natural evolution that introduces sophisticated aerodynamic solutions, while remaining faithful to the iconic Lamborghini design. The front bumper adopts unmistakable Lamborghini design cues such as signature Y-shape stylistic elements, bonnet lines inspired by the Countach, skirt air ducts reminiscent of the Murciélago, and high-mounted exhaust tailpipes that recall the highest performing models of the Lamborghini range. The model also introduces the new 20” Aesir rims and debuts Ad Personam colors for the car body, including Arancio Xanto.
             These elements produce an evolution projected towards the future that does not forget the past.
             </p>
+            <!--Button to display and animate the image onto the screen-->
             <button type="button" id='animate-image-button' class='animate-button'>Click to see the image</button>
+            <!--Button to hide the image so it can be displayed again-->
             <button type="button" id='hide-image-button' class='animate-button'>Click to hide the image</button>
-            </div>
+            <!--Image which the above two buttons control-->
             <img src="images/lamborghini-side-photo.jpg" alt="Lamborghini side photo" id='animate-image' class='section-image'>
-            
         </section>
-
+        <!--Button to scroll to the next section when clicked-->
         <a href="#interior" class='section-nav'>Next section</a>
-
+        <!--Interior section-->
         <section id='interior'>
             <h2 class='section-heading'>Interior</h2>
             <p class='section-text' id='interior-text'>
@@ -115,7 +109,7 @@
             </p>
             <img src="images/lamborghini-interior-photo.jpg" alt="Lamborghini interior photo" class='section-image'>
         </section>
-
+        <!--Button to scroll to the top when clicked-->
         <a href="#overview" class='section-nav'>To the top</a>
     </body>
     <footer>

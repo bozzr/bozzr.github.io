@@ -10,7 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!--If Jquery library is not found, then fallback to local Jquery file
         Starr, Jeff. 2019. "Include Google Jquery With Local Fallback | WP-Mix". Wp-Mix.Com. https://wp-mix.com/include-google-hosted-jquery-with-fallback.-->
-        <script type="text/javascript">
+        <script>
             if (typeof jQuery == 'undefined'){
                 document.write(unescape("%3Cscript src='/js/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"));
             }
@@ -26,7 +26,7 @@
                 }, 750, 'swing');
             });
         </script>
-        <!--Funciton to animate the image on mouse-over function to fade out the image and fade in the background color-->
+        <!--Function to animate the image on mouse-over function to fade out the image and fade in the background color-->
         <script>
             //
             $(document).ready(function(){
@@ -111,8 +111,8 @@
         </section>
         <!--Button to scroll to the top when clicked-->
         <a href="#overview" class='section-nav'>To the top</a>
+        <footer>
+            <p>Images and text sourced from: https://www.lamborghini.com/en-en/models/huracan/huracan-evo</p>
+        </footer>
     </body>
-    <footer>
-    <p>Images and text sourced from: https://www.lamborghini.com/en-en/models/huracan/huracan-evo</p>
-    </footer>
 </html>

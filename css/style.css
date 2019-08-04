@@ -1,6 +1,49 @@
 /*Set body to only take up 80% of the screen*/
 body {
-    width: 80%;
+    max-width: 1366px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: white;
+}
+
+#home {
+    background-image: url(/images/backgrounds/front-page.png);
+    height: 768px;
+}
+
+#about {
+    background-image: url(/images/backgrounds/about-page.png);
+    height: 768px;
+}
+
+#release-date{
+    background-image: url(/images/backgrounds/about-page.png);
+    height: 768px;
+}
+
+#gallery{
+    background-image: url(/images/backgrounds/about-page.png);
+    height: 768px;
+}
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 1366px;
+  height: 8px;
+  background: #ffffff;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: yellow;
+  width: 0%;
 }

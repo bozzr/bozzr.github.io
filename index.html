@@ -39,6 +39,54 @@
             document.getElementById("myBar").style.width = scrolled + "%";
             }
         </script>
+
+
+        <script>
+$('.line').hover(function () {
+        var $t = $(this);
+        var $i = $('#' + $t.data('id'));
+
+        // find offset positions for the word (t = this) and image (i)
+        var ot = {
+            x: $t.offset().left + $t.width() / 2,
+            y: $t.offset().top + $t.height() / 2
+        };
+        var oi = {
+            x: $i.offset().left + $i.width() / 2,
+            y: $i.offset().top + $i.height() / 2
+        };
+
+        // x,y = top left corner
+        // x1,y1 = bottom right corner
+        var p = {
+            x: ot.x < oi.x ? ot.x : oi.x,
+            x1: ot.x > oi.x ? ot.x : oi.x,
+            y: ot.y < oi.y ? ot.y : oi.y,
+            y1: ot.y > oi.y ? ot.y : oi.y
+        };
+
+        // create canvas between those points
+        var c = $('<canvas/>').attr({
+            'width': p.x1 - p.x,
+            'height': p.y1 - p.y
+        }).css({
+            'position': 'absolute',
+            'left': p.x,
+            'top': p.y,
+            'z-index': 1
+        }).appendTo($('body'))[0].getContext('2d');
+
+        // draw line
+        c.strokeStyle = '#f00';
+        c.lineWidth = 2;
+        c.beginPath();
+        c.moveTo(ot.x - p.x, ot.y - p.y);
+        c.lineTo(oi.x - p.x, oi.y - p.y);
+        c.stroke();
+    }, function () {
+        $('canvas').remove();
+    });
+        </script>
     </head>
 
 
@@ -52,16 +100,27 @@
         </div>
 
         <section id='home'>
-            <nav>
+            <nav id='main-nav'>
                 <a href="#about">what is</a>
                 <a href="#release-date">when is</a>
                 <a href="#gallery">show me</a>
             </nav>
-            <h1 id='main-title'>Cyberpunk 2077</h1>
-            <p>
-                From the creators of THE WITCHER 3, Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.
+
+            <p>This is my <span class='line' data-id="important_img">text</span> with this very <span class='line' data-id="important_img2">important</span> word</p>...
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="important.jpg" id="important_img" />
+            <br>
+            <br>
+            <img src="important.jpg" id="important_img2" />
+
+            <h1 id='main-title'>Cyber Punk 2077</h1>
+            <p id='main-desc'>
+                From the creators of <span id='main-witcher'>The Witcher 3</span>, Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.
             </p>
-            <p>
+            <p id='main-release-date'>
                 OUT 16 APRIL 2020
             </p>
             <img src='images/platforms/xbox-white.png' alt='xbox logo' class='platform-logos'>
@@ -70,7 +129,7 @@
         </section>
 
         <section id='about'>
-            <h1 id='main-title'>About Cyberpunk 2077</h1>
+            <h1 id='about-title'>About The Game</h1>
             <p>
                 <!--https://www.techradar.com/news/cyberpunk-2077-release-date-trailer-and-news-->
                 Cyberpunk 2077 is a neon cyberpunk game that has The Witcher 3 developer CD Projekt Red moving from a gritty, high fantasy world to an equally gritty, science fiction world metropolis. It's based off the pen-and-paper RPG of the same name, but plays a hell of a lot like The Matrix game we've always wanted.
@@ -86,6 +145,7 @@
         </section>
 
         <section id='release-date'>
+            <h1 id='release-title'>Release Date</h1>
             <p>
                 <!--https://www.techradar.com/news/cyberpunk-2077-release-date-trailer-and-news-->
                 There's still a while to wait before we can officially get our hands on Cyberpunk 2077 but, from what we've seen and heard so far, it seems like CD Projekt Red's dystopian RPG will definitely be worth the wait.
@@ -103,6 +163,7 @@
         </section>
 
         <section id='gallery'>
+            <h1 id='gallery-title'>Image Gallery</h1>
             <img src='images/screenshots/Cyberpunk2077-A_beautiful_beast-RGB-en.jpg' style="width:100%;max-width:300px" class="img-gallery">
             <img src='images/screenshots/Cyberpunk2077-Art_is_all_around-RGB-en.jpg' class='img-gallery' style="width:100%;max-width:300px">
             <img src='images/screenshots/Cyberpunk2077-Really_love_what_you_did_with_the_place-RGB-en.jpg' class='img-gallery' style="width:100%;max-width:300px">

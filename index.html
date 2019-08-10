@@ -46,21 +46,57 @@
             window.addEventListener('load', function() {
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('about-link'), 'draw', {style: {backgroundImage: null}}),
-                    document.getElementById('main-title'),
+                    document.getElementById('main-cyber'),
+                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                );
+                new LeaderLine(
+                    LeaderLine.mouseHoverAnchor(document.getElementById('about-link'), 'draw', {style: {backgroundImage: null}}),
+                    document.getElementById('main-punk'),
+                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                );
+                new LeaderLine(
+                    LeaderLine.mouseHoverAnchor(document.getElementById('about-link'), 'draw', {style: {backgroundImage: null}}),
+                    document.getElementById('main-2077'),
                     {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('release-link'), 'draw', {style: {backgroundImage: null}}),
-                    document.getElementById('main-title'),
+                    document.getElementById('main-cyber'),
+                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                );
+
+                new LeaderLine(
+                    LeaderLine.mouseHoverAnchor(document.getElementById('release-link'), 'draw', {style: {backgroundImage: null}}),
+                    document.getElementById('main-punk'),
+                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                );
+
+                new LeaderLine(
+                    LeaderLine.mouseHoverAnchor(document.getElementById('release-link'), 'draw', {style: {backgroundImage: null}}),
+                    document.getElementById('main-2077'),
                     {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('gallery-link'), 'draw', {style: {backgroundImage: null}}),
-                    document.getElementById('main-title'),
+                    document.getElementById('main-cyber'),
                     {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
+
+                new LeaderLine(
+                    LeaderLine.mouseHoverAnchor(document.getElementById('gallery-link'), 'draw', {style: {backgroundImage: null}}),
+                    document.getElementById('main-punk'),
+                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                );
+
+                new LeaderLine(
+                    LeaderLine.mouseHoverAnchor(document.getElementById('gallery-link'), 'draw', {style: {backgroundImage: null}}),
+                    document.getElementById('main-2077'),
+                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                );
+
+
 
             })
         </script>
@@ -77,22 +113,32 @@
         </div>
 
         <section id='home'>
-            <nav id='main-nav'>
-                <a href='#about' id='about-link'>what is</a>
-                <a href='#release-date' id='release-link'>when is</a>
-                <a href='#gallery' id='gallery-link'>show me</a>
-            </nav>
 
-            <h1 id='main-title'>Cyber Punk 2077</h1>
+            <nav id='main-nav'>
+                <a href='#about' id='about-link'>what is</a><br>
+                <a href='#release-date' id='release-link'>when is</a><br>
+                <a href='#gallery' id='gallery-link'>show me</a><br>
+            </nav>
+            <div id='main-title'>
+                <h1 id='main-cyber'>Cyber</h1>
+                <h1 id='main-punk'>Punk</h1>
+                <h1 id='main-2077'>2077</h1>
+            </div>
+
+
             <p id='main-desc'>
                 From the creators of <span id='main-witcher'>The Witcher 3</span>, Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.
             </p>
+
             <p id='main-release-date'>
                 OUT 16 APRIL 2020
             </p>
-            <img src='images/platforms/xbox-white.png' alt='xbox logo' class='platform-logos'>
-            <img src='images/platforms/ps4-white.png' alt='ps4 logo' class='platform-logos'>
-            <img src='images/platforms/pc-white.png' alt='pc logo' class='platform-logos'>
+            <div id='main-platforms'>
+                <img src='images/platforms/xbox-white.png' alt='xbox logo' class='platform-logos'>
+                <img src='images/platforms/ps4-white.png' alt='ps4 logo' class='platform-logos'>
+                <img src='images/platforms/pc-white.png' alt='pc logo' class='platform-logos'>
+            </div>
+
         </section>
 
         <section id='about'>
@@ -109,6 +155,11 @@
 
                 In order to unlock the secrets to the biochip, what basically becomes the main thread of the game, Silverhand will guide you to Alt Cunningham, the most legendary net runner of all-time. The only problem? She’s dead. But her consciousness lives on the web and you’ll need to do whatever it takes to track her down – including, but not limited to, befriending or eliminating leaders of the biggest gangs in Night City.
             </p>
+
+            <img src='images/screenshots/screen-ambushed-en.jpg' style="max-width:300px" class="img-gallery">
+
+            <img src='images/screenshots/Cyberpunk2077-The_million_euro_dollar_question-RGB-en.jpg' style="max-width:300px" class="img-gallery">
+
         </section>
 
         <section id='release-date'>
@@ -127,17 +178,29 @@
 
                 Considering The Witcher 3 took around three and a half years to develop, a 2019 release didn't seem unmanageable for the studio. But the scale of the development, as well as rumors of the game being a cross-gen Xbox Two and PS5 title, it makes sense that the game has taken longer than initially anticipated.
             </p>
+
+            <img src='images/screenshots/screen-its-a-deal-en.jpg' style="max-width:300px" class="img-gallery">
+
+            <img src='images/screenshots/screen-shock-to-save-shoot-to-kill-en.jpg' style="max-width:300px" class="img-gallery">
+
         </section>
 
         <section id='gallery'>
 
             <h1 id='gallery-title'>Image Gallery</h1>
             <img src='images/screenshots/Cyberpunk2077-A_beautiful_beast-RGB-en.jpg' style="max-width:300px" class="img-gallery">
+
             <img src='images/screenshots/Cyberpunk2077-Art_is_all_around-RGB-en.jpg' class='img-gallery' style="max-width:300px">
+
             <img src='images/screenshots/Cyberpunk2077-Really_love_what_you_did_with_the_place-RGB-en.jpg' class='img-gallery' style="width:100%;max-width:300px">
+
             <img src='images/screenshots/Cyberpunk2077-Welcome_to_Paradise-RGB-en.jpg' class='img-gallery' style="max-width:300px">
+
             <img src='images/screenshots/screen-a-mercenary-on-the-rise-en.jpg' class='img-gallery' style="max-width:300px">
+
             <img src='images/screenshots/screen-high-speed-high-stakes-en.jpg' class='img-gallery' style="width:300px">
+        </section>
+
 
             <!--https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-images-->
 
@@ -178,8 +241,6 @@
               modal.style.display = "none";
             }
             </script>
-
-        </section>
 
         <footer>
             <p>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.</p>

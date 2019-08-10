@@ -58,16 +58,20 @@ a {
     height: 50%;
     padding-left: 10%;
     line-height: 1.5;
+    vertical-align: middle;
 }
 
 #about-link{
     background-color: transparent !important;
+    vertical-align: middle;
 }
 #release-link{
     background-color: transparent !important;
+    vertical-align: middle;
 }
 #gallery-link{
     background-color: transparent !important;
+    vertical-align: middle;
 }
 
 #main-title{
@@ -112,8 +116,10 @@ a {
     color: yellow;
     float: left;
     width: 50%;
+    max-width: 600px;
     height: 30%;
-    padding-left: 20px;
+    padding-left: 5%;
+    background-color: black;
 }
 
 #main-witcher{
@@ -124,11 +130,14 @@ a {
 #main-release-date{
     text-transform: uppercase;
     font-size: 40px;
-    color: yellow;
+    color: black;
     float:right;
     width:30%;
     margin: 0px;
     height: 10%;
+    transform: rotate(10deg);
+    background-color: white;
+    overflow:hidden;
 }
 
 #main-platforms{
@@ -144,6 +153,8 @@ a {
     text-transform: uppercase;
     color: white;
     mix-blend-mode: difference;
+    width: 50%;
+    box-sizing: border-box;
 }
 
 /*About page fonts*/
@@ -151,6 +162,8 @@ a {
     text-transform: uppercase;
     color: white;
     mix-blend-mode: difference;
+    width: 50%;
+    box-sizing: border-box;
 }
 
 /*Gallery page fonts*/
@@ -158,6 +171,8 @@ a {
     text-transform: uppercase;
     color: white;
     mix-blend-mode: difference;
+    width: 50%;
+    box-sizing: border-box;
 }
 
 /* Style the header: fixed position (always stay at the top) */

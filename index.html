@@ -47,53 +47,53 @@
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('about-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-cyber'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('about-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-punk'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('about-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-2077'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('release-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-cyber'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('release-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-punk'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('release-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-2077'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('gallery-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-cyber'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('gallery-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-punk'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
                 new LeaderLine(
                     LeaderLine.mouseHoverAnchor(document.getElementById('gallery-link'), 'draw', {style: {backgroundImage: null}}),
                     document.getElementById('main-2077'),
-                    {color: 'black',startPlug:'square',endPlug: 'square',path: 'grid'}
+                    {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
 
 
@@ -141,8 +141,12 @@
         </section>
 
         <section id='about'>
-            <h1 id='about-title'>About The Game</h1>
-            <p>
+            <div id='about-title'>
+                <h1>About</h1>
+                <h1>The</h1>
+                <h1>Game</h1>
+            </div>
+            <p id='about-text'>
                 <!--https://www.techradar.com/news/cyberpunk-2077-release-date-trailer-and-news-->
                 Cyberpunk 2077 is a neon cyberpunk game that has The Witcher 3 developer CD Projekt Red moving from a gritty, high fantasy world to an equally gritty, science fiction world metropolis. It's based off the pen-and-paper RPG of the same name, but plays a hell of a lot like The Matrix game we've always wanted.
 
@@ -154,16 +158,20 @@
 
                 In order to unlock the secrets to the biochip, what basically becomes the main thread of the game, Silverhand will guide you to Alt Cunningham, the most legendary net runner of all-time. The only problem? She’s dead. But her consciousness lives on the web and you’ll need to do whatever it takes to track her down – including, but not limited to, befriending or eliminating leaders of the biggest gangs in Night City.
             </p>
-
+            <div id='about-images'>
             <img src='images/screenshots/screen-ambushed-en.jpg' style="max-width:300px" class="img-gallery">
-
             <img src='images/screenshots/Cyberpunk2077-The_million_euro_dollar_question-RGB-en.jpg' style="max-width:300px" class="img-gallery">
+            </div>
+
 
         </section>
 
         <section id='release-date'>
-            <h1 id='release-title'>Release Date</h1>
-            <p>
+            <div id='release-title'>
+                <h1>Release</h1>
+                <h1>Date</h1>
+            </div>
+            <p id='release-text'>
                 <!--https://www.techradar.com/news/cyberpunk-2077-release-date-trailer-and-news-->
                 There's still a while to wait before we can officially get our hands on Cyberpunk 2077 but, from what we've seen and heard so far, it seems like CD Projekt Red's dystopian RPG will definitely be worth the wait.
 
@@ -177,27 +185,33 @@
 
                 Considering The Witcher 3 took around three and a half years to develop, a 2019 release didn't seem unmanageable for the studio. But the scale of the development, as well as rumors of the game being a cross-gen Xbox Two and PS5 title, it makes sense that the game has taken longer than initially anticipated.
             </p>
+            <div id='release-images'>
+                <img src='images/screenshots/screen-its-a-deal-en.jpg' style="max-width:300px" class="img-gallery">
 
-            <img src='images/screenshots/screen-its-a-deal-en.jpg' style="max-width:300px" class="img-gallery">
+                <img src='images/screenshots/screen-shock-to-save-shoot-to-kill-en.jpg' style="max-width:300px" class="img-gallery">
+            </div>
 
-            <img src='images/screenshots/screen-shock-to-save-shoot-to-kill-en.jpg' style="max-width:300px" class="img-gallery">
 
         </section>
 
         <section id='gallery'>
 
-            <h1 id='gallery-title'>Image Gallery</h1>
-            <img src='images/screenshots/Cyberpunk2077-A_beautiful_beast-RGB-en.jpg' style="max-width:300px" class="img-gallery">
+            <div id='gallery-title'>
+                <h1>Gallery</h1>
+            </div>
+            <div id='gallery-images'>
+                <img src='images/screenshots/Cyberpunk2077-A_beautiful_beast-RGB-en.jpg' style="max-width:300px" class="img-gallery">
 
-            <img src='images/screenshots/Cyberpunk2077-Art_is_all_around-RGB-en.jpg' class='img-gallery' style="max-width:300px">
+                <img src='images/screenshots/Cyberpunk2077-Art_is_all_around-RGB-en.jpg' class='img-gallery' style="max-width:300px">
 
-            <img src='images/screenshots/Cyberpunk2077-Really_love_what_you_did_with_the_place-RGB-en.jpg' class='img-gallery' style="width:100%;max-width:300px">
+                <img src='images/screenshots/Cyberpunk2077-Really_love_what_you_did_with_the_place-RGB-en.jpg' class='img-gallery' style="width:100%;max-width:300px">
 
-            <img src='images/screenshots/Cyberpunk2077-Welcome_to_Paradise-RGB-en.jpg' class='img-gallery' style="max-width:300px">
+                <img src='images/screenshots/Cyberpunk2077-Welcome_to_Paradise-RGB-en.jpg' class='img-gallery' style="max-width:300px">
 
-            <img src='images/screenshots/screen-a-mercenary-on-the-rise-en.jpg' class='img-gallery' style="max-width:300px">
+                <img src='images/screenshots/screen-a-mercenary-on-the-rise-en.jpg' class='img-gallery' style="max-width:300px">
 
-            <img src='images/screenshots/screen-high-speed-high-stakes-en.jpg' class='img-gallery' style="width:300px">
+                <img src='images/screenshots/screen-high-speed-high-stakes-en.jpg' class='img-gallery' style="width:300px">
+            </div>
         </section>
 
 

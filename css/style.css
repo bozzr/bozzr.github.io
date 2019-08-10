@@ -1,10 +1,3 @@
-span {
-    font-weight:bold;
-    position:relative;
-    z-index:2;
-}
-
-
 /*Set body to only take up 80% of the screen*/
 body {
     max-width: 1366px;

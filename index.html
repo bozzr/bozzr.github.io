@@ -30,10 +30,9 @@
             });
         </script>
 
+        <!--When the user scrolls the page, execute myFunction-->
         <script>
-            // When the user scrolls the page, execute myFunction
             window.onscroll = function() {myFunction()};
-
             function myFunction() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -41,7 +40,7 @@
             document.getElementById("myBar").style.width = scrolled + "%";
             }
         </script>
-
+        <!--Draw lines between navigation elements and title-->
         <script>
             window.addEventListener('load', function() {
                 new LeaderLine(
@@ -95,14 +94,9 @@
                     document.getElementById('main-2077'),
                     {color: 'red',startPlug:'square',endPlug: 'square',path: 'grid'}
                 );
-
-
-
             })
         </script>
     </head>
-
-
 
     <body class='container'>
 
@@ -112,8 +106,36 @@
         </div>
         </div>
 
-        <section id='front'>
+        <div id='arrow'>
+            <a class="previous">&#8673;</a>
+            <a class="next">&#8675;</a>
+        </div>
 
+        <script>
+            var secs = document.querySelectorAll('section');
+            var currentSection = 0;
+            document.querySelector('#arrow').addEventListener('click', move);
+
+            function move(e) {
+            if (e.target.classList.contains('next') && currentSection < secs.length) {
+            window.scroll({
+            top: secs[++currentSection].offsetTop,
+            left: 0,
+            behavior: 'smooth'
+            });
+            //    secs[++currentSection].scrollIntoView({ behavior: 'smooth' });
+            } else if (currentSection > 0) {
+            window.scroll({
+            top: secs[--currentSection].offsetTop,
+            left: 0,
+            behavior: 'smooth'
+            });
+            }
+            }
+        </script>
+
+
+        <section id='front'>
             <nav id='main-nav'>
                 <a href='#about' id='about-link'>what is</a><br>
                 <a href='#release-date' id='release-link'>when is</a><br>
@@ -137,7 +159,6 @@
                 <img src='images/platforms/ps4-white.png' alt='ps4 logo' class='platform-logos'>
                 <img src='images/platforms/pc-white.png' alt='pc logo' class='platform-logos'>
             </div>
-
         </section>
 
         <section id='about'>
@@ -162,8 +183,6 @@
                 <img src='images/screenshots/screen-ambushed-en.jpg' class="img-gallery">
                 <img src='images/screenshots/Cyberpunk2077-The_million_euro_dollar_question-RGB-en.jpg' class="img-gallery">
             </div>
-
-
         </section>
 
         <section id='release-date'>
@@ -191,12 +210,9 @@
 
                 <img src='images/screenshots/screen-shock-to-save-shoot-to-kill-en.jpg' style="max-width:300px" class="img-gallery">
             </div>
-
-
         </section>
 
         <section id='gallery'>
-
             <div id='gallery-title'>
                 <h1 id='gallery-image'>Image</h1>
                 <h1 id='gallery-gallery'>Gallery</h1>
@@ -257,7 +273,7 @@
             }
             </script>
 
-        <footer>
+        <footer id='footer'>
             <p>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.</p>
         </footer>
     </body>

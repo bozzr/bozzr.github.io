@@ -15,11 +15,12 @@
                 document.write(unescape("%3Cscript src='/js/jquery-3.4.1.min.js' type='text/javascript'%3E%3C/script%3E"));
             }
         </script>
+
         <!--Load leader-line library to draw line between elements-->
         <script src="/js/leader-line.min.js"></script>
 
-        <!--Function for scrolling to section. If a link has a href that starts with #, it will scroll down to the section id that matches the href
-        that initiated the click.
+        <!--Function for scrolling to section. If a link has a href that starts with #, it will scroll down to the section id that matches the href that initiated the click.
+
         "Smooth Scroll To Page Section With Jquery - DEV Community". 2019. Dev.To. https://dev.to/attacomsian/smooth-scroll-to-page-section-with-jquery-2jng.-->
         <script>
             $(document).on('click', 'a[href^="#"]', function(e) {
@@ -40,6 +41,7 @@
             document.getElementById("myBar").style.width = scrolled + "%";
             }
         </script>
+
         <!--Draw lines between navigation elements and title-->
         <script>
             window.addEventListener('load', function() {
@@ -99,7 +101,7 @@
     </head>
 
     <body class='container'>
-
+        <!--Add progress bar to top of screen-->
         <div class="header">
         <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
@@ -109,26 +111,27 @@
         <section id='front'>
 
             <h2>Cyberpunk 2077</h2>
-
+            <!--Navigation menu on front page-->
             <nav id='main-nav'>
                 <a href='#about' id='about-link'>what is</a><br>
                 <a href='#release-date' id='release-link'>when is</a><br>
                 <a href='#gallery' id='gallery-link'>show me</a><br>
             </nav>
-
+            <!--Main title on front page-->
             <div id='main-title'>
                 <h1 id='main-cyber'>Cyber</h1>
                 <h1 id='main-punk'>Punk</h1>
                 <h1 id='main-2077'>2077</h1>
             </div>
-
+            <!--Description about game on front page-->
             <p id='main-desc'>
                 From the creators of <span id='main-witcher'>The Witcher 3</span>, Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.
             </p>
-
+            <!--Release date on front page-->
             <div id='main-release-date'>
                 OUT 16 APRIL 2020
             </div>
+            <!--Platform logos on front page-->
             <div id='main-platforms'>
                 <img src='images/platforms/xbox-white.png' alt='xbox logo' class='platform-logos'>
                 <img src='images/platforms/ps4-white.png' alt='ps4 logo' class='platform-logos'>
@@ -137,7 +140,7 @@
 
 
         </section>
-
+        <!--Section containing title for section and game-->
         <section id='about'>
             <div id='about-title'>
                 <h1 id='about-about'>About</h1>
@@ -145,7 +148,7 @@
                 <h1 id='about-punk'>Punk</h1>
                 <h1 id='about-2077'>2077</h1>
             </div>
-
+            <!--About the game text-->
             <p id='about-text'>
                 <!--https://www.techradar.com/news/cyberpunk-2077-release-date-trailer-and-news-->
                 Cyberpunk 2077 is a neon cyberpunk game that has The Witcher 3 developer CD Projekt Red moving from a gritty, high fantasy world to an equally gritty, science fiction world metropolis. It's based off the pen-and-paper RPG of the same name, but plays a hell of a lot like The Matrix game we've always wanted.<br><br>
@@ -156,6 +159,7 @@
 
                 In order to unlock the secrets to the biochip, what basically becomes the main thread of the game, Silverhand will guide you to Alt Cunningham, the most legendary net runner of all-time. The only problem? She’s dead. But her consciousness lives on the web and you’ll need to do whatever it takes to track her down – including, but not limited to, befriending or eliminating leaders of the biggest gangs in Night City.<br><br>
             </p>
+            <!--Screenshots of game that open up in modal window when clicked-->
             <div id='about-images'>
                 <img src='images/screenshots/screen-ambushed-en.jpg' alt='Cyberpunk 2077 screenshot' class="img-gallery">
                 <img src='images/screenshots/Cyberpunk2077-The_million_euro_dollar_question-RGB-en.jpg' alt='Cyberpunk 2077 screenshot' class="img-gallery">
@@ -182,6 +186,7 @@
 
                 Considering The Witcher 3 took around three and a half years to develop, a 2019 release didn't seem unmanageable for the studio. But the scale of the development, as well as rumors of the game being a cross-gen Xbox Two and PS5 title, it makes sense that the game has taken longer than initially anticipated.<br><br>
             </p>
+            <!--Screenshots of game that open up in modal window when clicked-->
             <div id='release-images'>
                 <img src='images/screenshots/screen-its-a-deal-en.jpg' alt='Cyberpunk 2077 screenshot' style="max-width:300px" class="img-gallery">
 
@@ -194,6 +199,7 @@
                 <h1 id='gallery-image'>Image</h1>
                 <h1 id='gallery-gallery'>Gallery</h1>
             </div>
+            <!--Screenshots of game that open up in modal window when clicked-->
             <div id='gallery-images'>
                 <img src='images/screenshots/Cyberpunk2077-A_beautiful_beast-RGB-en.jpg' alt='Cyberpunk 2077 screenshot' class="img-gallery">
 
@@ -211,7 +217,6 @@
 
 
             <!--https://stackoverflow.com/questions/41275958/modal-image-galleries-multiple-images-->
-
             <!-- The Modal -->
             <div id="myModal" class="modal">
 

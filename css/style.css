@@ -39,7 +39,7 @@ footer {
 }
 
 #front {
-    background-image: url(/images/backgrounds/front-page-large.png);
+    background-image: url(/images/backgrounds/front-page.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,7 +50,7 @@ footer {
 
 
 #about {
-    background-image: url(/images/backgrounds/about-page.png);
+    background-image: url(/images/backgrounds/about-page.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,7 +60,7 @@ footer {
 }
 
 #release-date{
-    background-image: url(/images/backgrounds/about-page.png);
+    background-image: url(/images/backgrounds/about-page.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,7 +70,7 @@ footer {
 }
 
 #gallery{
-    background-image: url(/images/backgrounds/about-page.png);
+    background-image: url(/images/backgrounds/about-page.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
